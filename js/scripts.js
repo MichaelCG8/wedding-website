@@ -33,17 +33,27 @@ $(document).ready(function () {
         offset: '75%'
     });
     $('.wp7').waypoint(function () {
-        $('.wp7').addClass('animated fadeInUp');
+        $('.wp7').addClass('animated fadeInLeft');
     }, {
         offset: '75%'
     });
     $('.wp8').waypoint(function () {
-        $('.wp8').addClass('animated fadeInLeft');
+        $('.wp8').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
     $('.wp9').waypoint(function () {
-        $('.wp9').addClass('animated fadeInRight');
+        $('.wp9').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp10').waypoint(function () {
+        $('.wp10').addClass('animated fadeInLeft');
+    }, {
+        offset: '75%'
+    });
+    $('.wp11').waypoint(function () {
+        $('.wp11').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
@@ -214,8 +224,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        if (MD5($('#invite_code').val()) !== '9d8d56adfb1c63a01b4144901c4dfe39') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbyG7QZ4SEVhh0dGtuAfPrYRk0Gfm1ip-IqtnbSwB4696WejqEnr5pqlFzeNICPihP3E/exec', data)
